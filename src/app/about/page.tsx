@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -17,12 +16,7 @@ export default function About() {
       {/* Main Content */}
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
-          >
+          <div className="text-center mb-12 animate-fade-in">
             <Badge variant="secondary" className="mb-4">
               <Heart className="w-4 h-4 mr-2" />
               Built with Love
@@ -33,14 +27,10 @@ export default function About() {
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
               A modern web application template that combines the best of Next.js, React, and modern web technologies.
             </p>
-          </motion.div>
+          </div>
           
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
+            <div className="animate-slide-up">
               <Card className="h-full bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-0 hover:shadow-lg transition-all duration-300">
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-2">
@@ -55,11 +45,11 @@ export default function About() {
                   <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-300">
                     <li className="flex items-center gap-2">
                       <Zap className="w-4 h-4 text-yellow-500" />
-                      Next.js 15 with App Router
+                      Next.js 14 with App Router
                     </li>
                     <li className="flex items-center gap-2">
                       <Zap className="w-4 h-4 text-blue-500" />
-                      React 19 with Server Components
+                      React 18 with Server Components
                     </li>
                     <li className="flex items-center gap-2">
                       <Zap className="w-4 h-4 text-green-500" />
@@ -76,13 +66,9 @@ export default function About() {
                   </ul>
                 </CardContent>
               </Card>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
+            <div className="animate-slide-up-delay">
               <Card className="h-full bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm border-0 hover:shadow-lg transition-all duration-300">
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-2">
@@ -118,10 +104,10 @@ export default function About() {
                   </ul>
                 </CardContent>
               </Card>
-            </motion.div>
+            </div>
           </div>
 
-          <Card className="text-center">
+          <Card className="text-center animate-slide-up-delay-2">
             <CardHeader>
               <CardTitle>Ready to build something amazing?</CardTitle>
               <CardDescription>
@@ -139,7 +125,7 @@ export default function About() {
           </Card>
         </div>
       </main>
-
+      
       <Footer />
     </div>
   )

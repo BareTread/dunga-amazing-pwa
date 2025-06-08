@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+// Removed framer-motion for deployment compatibility
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -94,10 +94,7 @@ export default function Features() {
       <Navigation />
       
       <main className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+        <div
           className="text-center mb-16"
         >
           <Badge variant="secondary" className="mb-4">
@@ -110,18 +107,14 @@ export default function Features() {
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             Dunga comes packed with modern features and tools to help you build amazing web applications faster than ever.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
           {features.map((feature, index) => {
             const Icon = feature.icon
             return (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -5, scale: 1.02 }}
                 className="group cursor-pointer"
                 onClick={() => handleFeatureClick(feature.title)}
               >
@@ -143,15 +136,12 @@ export default function Features() {
                     </p>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             )
           })}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
+        <div
           className="text-center"
         >
           <Card className="max-w-2xl mx-auto bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-0">
@@ -173,7 +163,7 @@ export default function Features() {
               </div>
             </CardContent>
           </Card>
-        </motion.div>
+        </div>
       </main>
 
       <Footer />
