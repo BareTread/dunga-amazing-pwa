@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { useToast } from "@/hooks/use-toast"
+// Removed toast for deployment compatibility
 import { 
   Zap, 
   Palette, 
@@ -80,13 +80,8 @@ const features = [
 ]
 
 export default function Features() {
-  const { toast } = useToast()
-
   const handleFeatureClick = (title: string) => {
-    toast({
-      title: "Feature Explored! 🎉",
-      description: `You clicked on ${title}. This could open a detailed view!`,
-    })
+    alert(`Feature Explored! 🎉\n${title} - This could open a detailed view!`)
   }
 
   return (
