@@ -25,7 +25,6 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div
-            whileInView={{ opacity: 1, y: 0 }}
             className="md:col-span-2"
           >
             <div className="flex items-center gap-2 mb-4">
@@ -57,7 +56,6 @@ export function Footer() {
 
           {/* Quick Links */}
           <div
-            whileInView={{ opacity: 1, y: 0 }}
           >
             <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -80,7 +78,6 @@ export function Footer() {
 
           {/* Tech Stack */}
           <div
-            whileInView={{ opacity: 1, y: 0 }}
           >
             <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">Built With</h3>
             <ul className="space-y-2">
@@ -104,7 +101,6 @@ export function Footer() {
 
         {/* Bottom Section */}
         <div
-          whileInView={{ opacity: 1, y: 0 }}
           className="mt-12 pt-8 border-t border-slate-200/50 dark:border-slate-700/50 flex flex-col md:flex-row items-center justify-between gap-4"
         >
           <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
