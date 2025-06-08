@@ -1,0 +1,6 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="64" fill="#000000"/>
+  <path d="M128 192C128 157.565 156.654 130 192 130H320C355.346 130 384 157.565 384 192V320C384 354.435 355.346 382 320 382H192C156.654 382 128 354.435 128 320V192Z" fill="#ffffff"/>
+  <circle cx="256" cy="256" r="48" fill="#000000"/>
+  <text x="256" y="440" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="48" font-weight="bold">DUNGA</text>
+</svg>
