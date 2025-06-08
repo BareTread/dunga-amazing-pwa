@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Zap, Palette, Smartphone, Shield, Rocket, Heart } from "lucide-react"
@@ -56,13 +55,10 @@ export function FeaturesGrid() {
       {features.map((feature, index) => {
         const Icon = feature.icon
         return (
-          <motion.div
+          <div
             key={feature.title}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            whileHover={{ y: -5 }}
-            className="group"
+            className="group animate-slide-up hover:-translate-y-1 transition-transform duration-300"
+            style={{ animationDelay: `${index * 0.1}s` }}
           >
             <Card className="h-full transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 border-0 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
               <CardHeader>
@@ -87,7 +83,7 @@ export function FeaturesGrid() {
                 </p>
               </CardContent>
             </Card>
-          </motion.div>
+          </div>
         )
       })}
     </div>

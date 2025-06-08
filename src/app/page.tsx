@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { InstallPrompt } from "@/components/install-prompt"
+import { SimpleInstallPrompt } from "@/components/simple-install-prompt"
 import { Navigation } from "@/components/navigation"
 import { AnimatedHero } from "@/components/animated-hero"
 import { FeaturesGrid } from "@/components/features-grid"
@@ -38,7 +38,7 @@ export default function Home() {
       </main>
 
       <Footer />
-      <InstallPrompt />
+      <SimpleInstallPrompt />
     </div>
   );
 }
