@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+// Removed framer-motion for deployment
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
@@ -18,22 +18,18 @@ export function Navigation() {
   ]
 
   return (
-    <motion.header
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+    <header
       className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
+            <div
               whileTap={{ scale: 0.95 }}
               className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
             >
               Dunga
-            </motion.div>
+            </div>
             <Badge variant="secondary" className="hidden sm:flex">
               <Sparkles className="w-3 h-3 mr-1" />
               PWA
@@ -51,10 +47,8 @@ export function Navigation() {
                   >
                     {item.label}
                     {pathname === item.href && (
-                      <motion.div
-                        layoutId="activeTab"
+                      <div
                         className="absolute inset-0 bg-primary rounded-md -z-10"
-                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                       />
                     )}
                   </Button>
@@ -71,6 +65,6 @@ export function Navigation() {
           </div>
         </nav>
       </div>
-    </motion.header>
+    </header>
   )
 }

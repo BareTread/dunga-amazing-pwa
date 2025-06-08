@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+// Removed framer-motion for deployment
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -24,10 +24,8 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
             className="md:col-span-2"
           >
             <div className="flex items-center gap-2 mb-4">
@@ -55,13 +53,11 @@ export function Footer() {
                 </Link>
               </Button>
             </div>
-          </motion.div>
+          </div>
 
           {/* Quick Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -80,13 +76,11 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Tech Stack */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">Built With</h3>
             <ul className="space-y-2">
@@ -105,14 +99,12 @@ export function Footer() {
                 )
               })}
             </ul>
-          </motion.div>
+          </div>
         </div>
 
         {/* Bottom Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <div
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
           className="mt-12 pt-8 border-t border-slate-200/50 dark:border-slate-700/50 flex flex-col md:flex-row items-center justify-between gap-4"
         >
           <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
@@ -130,7 +122,7 @@ export function Footer() {
             <ArrowUp className="mr-2 h-4 w-4 group-hover:-translate-y-1 transition-transform" />
             Back to Top
           </Button>
-        </motion.div>
+        </div>
       </div>
 
       {/* Background decoration */}
