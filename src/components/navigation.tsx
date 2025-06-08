@@ -25,8 +25,7 @@ export function Navigation() {
         <nav className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
             <div
-              whileTap={{ scale: 0.95 }}
-              className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+              className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:scale-95 transition-transform"
             >
               Dunga
             </div>
